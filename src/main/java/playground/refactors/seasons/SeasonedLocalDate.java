@@ -3,6 +3,8 @@ package playground.refactors.seasons;
 import java.time.LocalDate;
 import javax.annotation.Nonnull;
 
+import static playground.refactors.seasons.Example.*;
+
 public class SeasonedLocalDate {
     private final LocalDate localDate;
 
@@ -11,18 +13,18 @@ public class SeasonedLocalDate {
     }
 
     public boolean isWinter2022() {
-        return Example.isWinter2022(localDate);
+        return !localDate.isBefore(WINTER_2022_START) && localDate.isBefore(SPRING_2022_START);
     }
 
     public boolean isSpring2022() {
-        return Example.isSpring2022(localDate);
+        return !localDate.isBefore(SPRING_2022_START) && localDate.isBefore(SUMMER_2022_START);
     }
 
     public boolean isSummer2022() {
-        return Example.isSummer2022(localDate);
+        return !localDate.isBefore(SUMMER_2022_START) && localDate.isBefore(AUTUMN_2022_START);
     }
 
     public boolean isAutum22022() {
-        return Example.isAutum22022(localDate);
+        return !localDate.isBefore(AUTUMN_2022_START) && localDate.isBefore(WINTER_2023_START);
     }
 }

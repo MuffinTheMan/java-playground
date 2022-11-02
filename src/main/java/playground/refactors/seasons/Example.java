@@ -10,11 +10,11 @@ public class Example {
         SUMMER_2022,
         AUTUMN_2022,
     }
-    private final static LocalDate WINTER_2022_START = LocalDate.of(2021, 12, 21); // Dec 21
-    private final static LocalDate SPRING_2022_START = LocalDate.of(2022, 3, 20); // Mar 20
-    private final static LocalDate SUMMER_2022_START = LocalDate.of(2022, 6, 21); // Jun 21
-    private final static LocalDate AUTUMN_2022_START = LocalDate.of(2022, 9, 22); // Sep 22
-    private final static LocalDate WINTER_2023_START = LocalDate.of(2022, 12, 21); // Dec 21
+    final static LocalDate WINTER_2022_START = LocalDate.of(2021, 12, 21);
+    final static LocalDate SPRING_2022_START = LocalDate.of(2022, 3, 20);
+    final static LocalDate SUMMER_2022_START = LocalDate.of(2022, 6, 21);
+    final static LocalDate AUTUMN_2022_START = LocalDate.of(2022, 9, 22);
+    final static LocalDate WINTER_2023_START = LocalDate.of(2022, 12, 21);
 
     static void doSeasonalThingsSimpleConditional(@Nonnull final LocalDate date) {
         if (!date.isBefore(WINTER_2022_START) && date.isBefore(SPRING_2022_START)) {
